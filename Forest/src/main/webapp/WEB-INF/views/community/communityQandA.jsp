@@ -7,7 +7,6 @@
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
 <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-<body style="padding-top: 72px">
   <section class="py-6">
     <div class="container">
       <div class="row">

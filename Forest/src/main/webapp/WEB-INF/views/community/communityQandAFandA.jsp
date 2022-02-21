@@ -8,7 +8,6 @@
 
 <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-<body style="padding-top: 72px">
  <!-- 메인 -->
   <section class="py-6">
     <div class="container">
