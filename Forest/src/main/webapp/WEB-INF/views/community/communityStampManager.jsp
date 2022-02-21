@@ -8,7 +8,6 @@
 
 <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-<body style="padding-top: 72px;">
   <!-- 경로 -->
   <section class="d-flex align-items-center dark-overlay bg-cover"
     style="background-image: url(img/breadcrumbs_img.jpg)">

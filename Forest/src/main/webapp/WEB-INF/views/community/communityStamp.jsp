@@ -9,9 +9,8 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
 
-<body style="padding-top: 72px">
- <!-- 메인 -->
 
+ <!-- 메인 -->
   <section>
     <div class="container pt-6">
       <div class="row pb-5">

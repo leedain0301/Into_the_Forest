@@ -8,7 +8,6 @@
 
 <jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-<body>
   <section>
     <div class="container">
       <div class="row">
