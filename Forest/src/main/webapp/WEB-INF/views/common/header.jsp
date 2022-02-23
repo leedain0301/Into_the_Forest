@@ -80,9 +80,7 @@
                 <a class="dropdown-item" href="${path}/community/communityReview">방문후기</a>
             	<a class="dropdown-item" href="${path}/community/communityStamp">등산 스탬프 순위</a>
             	<c:if test="${ loginMember.role == 'ROLE_ADMIN' }">
-					<li class="admin-member">
 		            	<a class="dropdown-item" href="${path}/community/communityStampManager">등산 스탬프 관리</a>
-					</li>	
 				</c:if>
               </div>
             </li>
@@ -95,18 +93,16 @@
             </li>
             <c:if test="${loginMember == null}">
 	            <li class="nav-item mx-3">
-	    	        <a class="nav-link fs-6" href="${path}/common/login">Sign in</a>
+	    	        <a class="nav-link fs-6" href="${path}/member/login">Sign in</a>
 	            </li>
 	            <li class="nav-item">
-	           		<a class="nav-link fs-6" href="${path}/common/signup">Sign up</a>
+	           		<a class="nav-link fs-6" href="${path}/member/signup">Sign up</a>
 	            </li>
 			</c:if>
            	<c:if test="${ loginMember != null }">
-	            <li class="nav-item mx-3">
-	    	        <button onclick="location.href = '<%=request.getContextPath()%>/member/view';">${loginMember.name} 님</button>
-	            </li>
-	            <li class="nav-item">
-	           		<button onclick="location.replace('<%= request.getContextPath() %>/logout')">로그아웃</button>
+	            <li class="nav-item mx-2">
+	           		<a class="btn btn-primary ps-3" href="${path}/user/user">${loginMember.name} 님</a></div>
+	           		<a class="nav-link fs-6" href="${path}/logout">로그아웃</a>
 	            </li>
 			</c:if>
           </ul>
