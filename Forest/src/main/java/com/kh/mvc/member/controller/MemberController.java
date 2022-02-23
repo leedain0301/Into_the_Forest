@@ -3,6 +3,8 @@ package com.kh.mvc.member.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,11 +32,17 @@ public class MemberController {
 	@Autowired
 	private MemberService service;
 	
+	@RequestMapping(value = "/member/login", method = {RequestMethod.GET})
+	public String loginPage() {
+		log.info("로그인 페이지 요청");
+		return "member/login";
+	}
+	
 	@RequestMapping(value = "/login", method = {RequestMethod.POST})
-	public ModelAndView login(ModelAndView model, String userId, String userPwd) {
-		log.info("{},{}",userId,userPwd);
+	public ModelAndView login(ModelAndView model, String loginUserId, String loginPassword) {
+		log.info("{},{}",loginUserId,loginPassword);
 		
-		Member loginMember = service.login(userId, userPwd);
+		Member loginMember = service.login(loginUserId, loginPassword);
 		
 		if(loginMember != null) {
 			model.addObject("loginMember",loginMember); // 어노테이션을 통해 Session으로 처리되는 코드 
@@ -58,13 +66,13 @@ public class MemberController {
 		return "redirect:/";
 	}
 	
-	@GetMapping("/member/enroll")
+	@GetMapping("/member/signup")
 	public String enrollPage() {
 		log.info("가입 페이지 요청");
-		return "member/enroll";
+		return "member/signup";
 	}
 	
-	@PostMapping("/member/enroll")
+	@PostMapping("/member/signup")
 	public ModelAndView enroll(ModelAndView model, @ModelAttribute Member member) {
 		log.info("회원가입 member : " + member);
 		
