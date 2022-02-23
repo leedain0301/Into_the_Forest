@@ -218,17 +218,22 @@
 					</div>
 				</div>
 			</div>
+			<!-- 지도 영역 시작 -->
 			<div class="col-lg-5 col-xl-6 px-lg-0">
 				<div class="map-wrapper-450 h-100" id="detailSideMap"></div>
 			</div>
+			<!-- 지도 영역 끝 -->
 		</div>
 	</div>
 </section>
 <!-- 푸터 -->
 <jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 <!-- Map-->
+<!-- 
 <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+ -->
 <!-- Available tile layers-->
+<!-- 
 <script src="${ path }/resources/js/map-layers.js"></script>
 <script src="${ path }/resources/js/map-detail.js"></script>
 <script>
@@ -241,6 +246,7 @@
 		markerPath : '${path}/resources/img/marker.svg',
 	})
 </script>
+ -->
 <!-- Daterange picker-->
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.19.0/jquery.daterangepicker.min.js"></script>
